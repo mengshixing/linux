@@ -3,3 +3,5 @@
 2    查看一个文件夹的大小:跳转到此文件夹上级目录,du -sh 加上文件夹名字
 
 3    nginx常规重启命令 service nginx restart
+
+4    crontab -l显示定时任务,crontab -e编辑定时任务
