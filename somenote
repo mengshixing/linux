@@ -5,3 +5,5 @@
 3    nginx常规重启命令 service nginx restart
 
 4    crontab -l显示定时任务,crontab -e编辑定时任务
+
+5    常规查询,例如查询nginx配置文件find /|grep nginx.conf
