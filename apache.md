@@ -7,3 +7,13 @@
 Options Indexes FollowSymLinks Includes
 AddType text/html .shtml .html
 AddOutputFilter INCLUDES .shtml .html
+
+
+
+2  Access forbidden! 
+
+<Directory />
+    # AllowOverride none
+    # Require all denied
+	Allow from all 
+</Directory>
