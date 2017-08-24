@@ -3,9 +3,14 @@
 2    查看一个文件夹的大小:跳转到此文件夹上级目录,du -sh 加上文件夹名字
      du -sh * 查看当前文件夹下所有目录的大小(以列表形式)
      df -ah列出磁盘总容量,可用容量,使用
+	 fdisk -l显示各个分区信息
 
 3    nginx常规重启命令 service nginx restart
 
 4    crontab -l显示定时任务,crontab -e编辑定时任务
 
 5    常规查询,例如查询nginx配置文件find /|grep nginx.conf
+
+6    lsof查询应用程序占用文件列表,
+     lsof | grep delete获取一个已经被删除但仍然被应用程序占用的文件列表
+	 http://blog.csdn.net/guoguo1980/article/details/2324454

@@ -23,3 +23,10 @@
     上面设定的含义是先设定“先检查禁止设定，没有禁止的全部允许”，而第二句没有Deny，
     也就是没有禁止访问的设定，直接就是允许所有访问了。可以用来限制访问的ip
     这个主要是用来确保或者覆盖上级目录的设置，开放所有内容的访问权。
+    
+3,apache监测启用和加载的模块:apache2ctl
+	
+	apache2ctl -t -D DUMP_MODULES 显示所有启用的模块	
+	apache2ctl status 检测apache状态
+
+4,apache安装完模块后要在配置文件加LoadModule +模块索引并重启
