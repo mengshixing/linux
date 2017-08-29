@@ -22,3 +22,10 @@
 
 8   xargs用来支持|管道来传递参数
 	find / -name 'super*.md' |xargs rm -rf查询出super*.md的文件并删除
+	
+9   cd 提示权限不够,加上sudo之后提示命令不存在
+	因为/root及其下面的文件权限通常为rwx --- --- 所以其他用户是没办法cd进入里面的目录的。
+	在sudo 后面接上 系统内置的命令 比如cd  他就会提示没这个命令。
+	你可以 sudo  su 或者 sudo -i 切换成root用户之后再进行操作
+	
+10 清空文件内容指令 > filename
