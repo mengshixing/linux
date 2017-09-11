@@ -16,16 +16,44 @@
      http://blog.csdn.net/guoguo1980/article/details/2324454
 
 7   crontab 设置按秒来执行脚本可以使用sleep指令
-	*/1 * * * * sleep 5; 
-	*/1 * * * * sleep 10; 
-	*/1 * * * * sleep 15; 
+    */1 * * * * sleep 5; 
+    */1 * * * * sleep 10; 
+    */1 * * * * sleep 15; 
 
 8   xargs用来支持|管道来传递参数
-	find / -name 'super*.md' |xargs rm -rf查询出super*.md的文件并删除
-	
+    find / -name 'super*.md' |xargs rm -rf查询出super*.md的文件并删除
+    
 9   cd 提示权限不够,加上sudo之后提示命令不存在
-	因为/root及其下面的文件权限通常为rwx --- --- 所以其他用户是没办法cd进入里面的目录的。
-	在sudo 后面接上 系统内置的命令 比如cd  他就会提示没这个命令。
-	你可以 sudo  su 或者 sudo -i 切换成root用户之后再进行操作
-	
-10 清空文件内容指令 > filename
+    因为/root及其下面的文件权限通常为rwx --- --- 所以其他用户是没办法cd进入里面的目录的。
+    在sudo 后面接上 系统内置的命令 比如cd  他就会提示没这个命令。
+    你可以 sudo  su 或者 sudo -i 切换成root用户之后再进行操作
+    
+10  清空文件内容指令 > filename
+
+11  常规安装包流程:一般下载源码包得到文件：xxxx.tgz
+        1、解包软件 tar zxf xxxx.tgz
+        2、配置 cd xxxx
+                ./configure ....
+        3、编译 make
+        4、安装 make install
+        5、卸载 make uninstall
+        
+12  tar -zxvf /opt/soft/test/log.tar.gz解压
+    创建tar.xz文件：只要先 tar cvf xxx.tar xxx/ 这样创建xxx.tar文件先，然后使用 xz -z xxx.tar 来将 xxx.tar压缩成为 xxx.tar.xz
+    解压tar.xz文件：先 xz -d xxx.tar.xz 将 xxx.tar.xz解压成 xxx.tar 然后，再用 tar xvf xxx.tar来解包。
+    
+13  hg错误(mercurial一种分布式仓管,类似git) 无法识别python 
+    hg -v
+    /usr/bin/hg: line 11: try:: command not found
+    解决办法 vi /usr/bin/hg  第一行#!/usr/bin/python可以改为其他地址测试  #!/usr/bin/pythonbak
+    
+14  which
+    which命令的作用是，在PATH变量指定的路径中，搜索某个系统命令的位置，并且返回第一个搜索结果。
+    也就是说，使用which命令，就可以看到某个系统命令是否存在，以及执行的到底是哪一个位置的命令。
+
+15  file+文件名查看文件属性
+    
+    
+    
+    
+    
