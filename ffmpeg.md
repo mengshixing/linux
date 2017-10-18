@@ -1,4 +1,4 @@
-###一,提取音频 从视频中
+### 一,提取音频 从视频中
 >-ar 音频采样率
 -ac 频道数
 
@@ -17,7 +17,7 @@ ffmpeg -i 430.flv -ac 1 -ar 8000 -f wav -vn 431.wav
 视频质量越高提取率越低 大概5%-30%左右 但是生成音频大小约为 50M/h
 	
 
-###二,合成字幕 1-2min/h
+### 二,合成字幕 1-2min/h
 
 >字幕文件类型转换 ffmpeg -i keyushen.srt keyushen.ass
 
@@ -27,6 +27,6 @@ ffmpeg -i 430.flv -ac 1 -ar 8000 -f wav -vn 431.wav
 
 合成带字幕视频ffmpeg -i 430.flv -vf subtitles=431.srt 442.flv
 	
-###三,剪辑视频
+### 三,剪辑视频
 
 >ffmpeg  -i v9uXnTn2.flv -vcodec copy -acodec copy -ss 00:00:00 -to 00:04:30 430.flv -y
