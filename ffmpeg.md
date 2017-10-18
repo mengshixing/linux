@@ -2,7 +2,7 @@
 >-ar 音频采样率 
 -ac 频道数
 
->ffmpeg -i Sample.avi -vn -ar 44100 -ac 2 -ab 192k -f mp3 Sample.mp3 
+>ffmpeg -i Sample.avi -vn -ar 44100 -ac 2 -ab 192k -f mp3 Sample.mp3     
 ffmpeg -i AomawaShields_2015U.mp4 -f wav -vn output1.wav 
 ffmpeg -i v9uXnTn2.flv -ac 1 -ar 16000 -f wav -vn v9uXnTn2.wav暂时先用这个 
 ffmpeg -i 430.flv -ac 1 -ar 8000 -f wav -vn 431.wav  
