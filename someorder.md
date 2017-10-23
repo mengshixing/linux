@@ -62,5 +62,5 @@
         1           /usr/lib/jvm/jre-1.8.0-openjdk.x86_64-debug/bin/java          
      *+ 2           /usr/lib/jvm/jre-1.8.0-openjdk.x86_64/bin/java
     
-    
-    
+    
+18  查看bash等命令的软链接,可以使用ll或者 ls -l +文件名即可
