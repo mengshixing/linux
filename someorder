@@ -54,7 +54,13 @@
 15  file+文件名查看文件属性
    
 16  改变文件权限 chmod 777 文件名  可以快速赋文件所以权限
+
+17  update-alternatives --config java可以选择当前使用的版本软连接,带*号为当前使用
     
+       Selection    Command
+     -----------------------------------------------
+        1           /usr/lib/jvm/jre-1.8.0-openjdk.x86_64-debug/bin/java
+     *+ 2           /usr/lib/jvm/jre-1.8.0-openjdk.x86_64/bin/java
     
     
     
