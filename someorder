@@ -64,3 +64,5 @@
     
     
 18  查看bash等命令的软链接,可以使用ll或者 ls -l +文件名即可
+
+19  创建软连接 ln -s my_cmd mycmd1  删除软连接 rm -rf  ./test_chk_ln
