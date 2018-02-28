@@ -18,7 +18,16 @@
 7   crontab 设置按秒来执行脚本可以使用sleep指令  
     */1 * * * * sleep 5;        
     */1 * * * * sleep 10;     
-    */1 * * * * sleep 15;      
+    */1 * * * * sleep 15;   
+    
+    crontab开启日志
+     1）修改rsyslog
+     sudo vim /etc/rsyslog.d/50-default.conf
+     cron.* /var/log/cron.log #将cron前面的注释符去掉
+     2）重启rsyslog
+     sudo service rsyslog restart
+     3）查看crontab日志
+     less /var/log/cron.log 
 
 8   xargs用来支持|管道来传递参数    
     find / -name 'super*.md' |xargs rm -rf查询出super*.md的文件并删除
