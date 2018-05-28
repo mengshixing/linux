@@ -34,3 +34,8 @@
 5,关闭防火墙
 	关闭命令：  service iptables stop    
 	永久关闭防火墙：chkconfig iptables off   
+	
+6,添加防火墙允许端口：
+	vim /etc/sysconfig/iptables 添加   
+	 -A INPUT -m state --state NEW -m tcp -p tcp --dport 80 -j ACCEPT 
+	 保存  /etc/init.d/iptables restart 重启
