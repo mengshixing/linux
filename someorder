@@ -86,6 +86,9 @@
     NETMASK=255.255.255.0  
     GATEWAY=192.168.0.1  
     ONBOOT=yes    
+    DNS1=114.114.114.114   
+    DNS2=223.5.5.5   
+    (223阿里的DNS,不配置DNS的话无法上外网)
     保存后重启网络service etwork restart  
     
 
