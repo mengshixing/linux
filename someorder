@@ -76,4 +76,16 @@
 
 19  创建软连接 ln -s my_cmd mycmd1  删除软连接 rm -rf  ./test_chk_ln
 
-20  touch可以直接创建空文件
+20  touch可以直接创建空文件   
+
+21  新系统配置静态IP:   
+    sudo tc/sysconfig/network-scripts/ifcfg-eth0   
+    添加(BOOTPROTO的值static静态,dhcp动态,none不确定)   
+    BOOTPROTO=static
+    IPADDR=192.168.0.115  
+    NETMASK=255.255.255.0  
+    GATEWAY=192.168.0.1  
+    ONBOOT=yes    
+    保存后重启网络service etwork restart  
+    
+
