@@ -29,4 +29,8 @@
 	apache2ctl -t -D DUMP_MODULES 显示所有启用的模块	
 	apache2ctl status 检测apache状态
 
-4,apache安装完模块后要在配置文件加LoadModule +模块索引并重启
+4,apache安装完模块后要在配置文件加LoadModule +模块索引并重启  
+
+5,关闭防火墙
+	关闭命令：  service iptables stop    
+	永久关闭防火墙：chkconfig iptables off   
