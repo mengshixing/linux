@@ -37,5 +37,5 @@
 	
 6,添加防火墙允许端口：
 	vim /etc/sysconfig/iptables 添加   
-	 -A INPUT -m state --state NEW -m tcp -p tcp --dport 80 -j ACCEPT 
+	 -A INPUT -m state --state NEW -m tcp -p tcp --dport 80 -j ACCEPT     
 	 保存  /etc/init.d/iptables restart 重启
