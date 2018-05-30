@@ -87,13 +87,20 @@
 		mysqlbinlog mysql-bin.000032 --database=lms --start-position=619405 --stop-position=619505
     
 7,清空现有的所用bin-log: reset master;
-    启用新的日志文件，一般备份完数据库后执行,show master status;
+    	启用新的日志文件，一般备份完数据库后执行,show master status;
     
 8,日志文件转换为sql:
-    //mysqlbinlog  /usr/local/mysql/var/mysql-bin.000012 --database=money_a --start-datetime='2016-07-20 00:00:01' 
-    //--stop-datetime='2016-07-24 23:59:59'   > 26-day.sql
+    	//mysqlbinlog  /usr/local/mysql/var/mysql-bin.000012 --database=money_a --start-datetime='2016-07-20 00:00:01' 
+    	//--stop-datetime='2016-07-24 23:59:59'   > 26-day.sql
     
-    mysqlbinlog mysql-bin.000033 --database=lms >/home/lms/s33.sql
+   	 mysqlbinlog mysql-bin.000033 --database=lms >/home/lms/s33.sql
+	
+	
+10 mysql初次安装之后登陆会提示Access denied for user 'root'@'localhost' (using password: NO)   
+   	 配置root密码安全模式启动mysql：  
+	 mysqld_safe --user=mysql --skip-grant-tables --skip-networking &    
+	 然后use mysql;  
+	 UPDATE user SET PASSWORD=PASSWORD('123456') where USER='root';重启即可
     
     
     
