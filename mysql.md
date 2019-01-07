@@ -103,11 +103,11 @@
 	 UPDATE user SET PASSWORD=PASSWORD('123456') where USER='root';重启即可
 	 
 11 mysql 5.7版本group分组查询error,需要关闭only_full_group_by模式
-   Expression #1 of SELECT list is not in GROUP BY ...with sql_mode=only_full_group_by
-   解决方法:
-   选择文件/etc/mysql/conf.d/mysql.cnf
-   末尾添加以下代码,重启mysql即可
-   [mysqld]      sql_mode=STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION
+         Expression #1 of SELECT list is not in GROUP BY ...with sql_mode=only_full_group_by
+         解决方法:
+         选择文件/etc/mysql/conf.d/mysql.cnf
+         末尾添加以下代码,重启mysql即可
+         [mysqld]          sql_mode=STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION
    
     
     
