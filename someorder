@@ -91,4 +91,6 @@
     (223阿里的DNS,不配置DNS的话无法上外网)
     保存后重启网络service etwork restart  
     
+ 22 开机启动项 一般直接写在/etc/rc.local里就行，这个文件挂载在/etc/init.d/rc.local里面执行
+    
 
