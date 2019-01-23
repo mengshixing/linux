@@ -22,3 +22,5 @@
         (tc) their side of conflict, (s) show all options:
     选择tc 是更新最新的
     
+ 4 当前用户权限不够   
+   svn auth 看下当前是那个用户,然后 sudo find / -name .subversion 找到auth文件夹  rm -rf svn.simple/重新提交即可
