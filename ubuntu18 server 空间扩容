@@ -1,0 +1,25 @@
+参考https://blog.csdn.net/qq_14824885/article/details/82664635
+
+1 查看磁盘情况
+  df -h  
+查看 /dev/mapper/ubuntu–vg-ubuntu–lv 这个磁盘满了,所以要进行扩容的就是这个了
+
+2 显示存在的卷组
+ sudo vgdisplay
+可以看出 
+Alloc PE / Size 12800 / 50.00 GiB 
+Free PE / Size 44049 / <172.07 GiB 
+这两个 第一个就是我的 /dev/mapper/ubuntu–vg-ubuntu–lv 这个磁盘 
+第二个是 这个磁盘可以扩容的大小 也就是剩余可以扩容多少
+
+3 扩容开始,给磁盘加300G
+sudo lvextend -L 300G /dev/mapper/ubuntu--vg-ubuntu--lv 
+
+//下面这行我没测试
+或者把空闲所有的都加上（sudo lvextend -l +100%FREE /dev/mapper/ubuntu--vg-ubuntu--lv）
+
+4 重新计算磁盘大小
+sudo resize2fs /dev/mapper/ubuntu--vg-ubuntu--lv
+
+然后 sudo vgdisplay   
+ df -h 查看下是否加上了
