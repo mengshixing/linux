@@ -92,5 +92,16 @@
     保存后重启网络service etwork restart  
     
  22 开机启动项 一般直接写在/etc/rc.local里就行，这个文件挂载在/etc/init.d/rc.local里面执行
-    
+ 23 ubuntu 18 配置静态地址 编辑/etc/netpan/50-cloud-init.yaml
+    network: 
+      ethernets:  
+        enp4s0:  
+          addresses: [192.168.0.20/24]
+          gateway4:  192.168.0.1  
+          nameservers:  
+             addresses: [114.114.114.114, 8.8.8.8]
+          dhcp4: no 
+          optional: no 
+      version:  2
+  刷新服务：sudo netplan apply 即可
 
