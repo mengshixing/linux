@@ -1,0 +1,9 @@
+sudo apt-get install mysql-server
+在ubuntu 18操作系统安装mysql之后,sudo mysql -u root即可登录,无法给root添加密码,
+所以我们需要把root用户删除
+DROP USER 'root'@'localhost';
+然后重新添加，添加的时候密码等级默认要求是1级(包含大小写字母,特殊字符)
+CREATE USER 'root'@'%' IDENTIFIED BY '123456';
+授权,执行即可
+GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' WITH GRANT OPTION;
+FLUSH PRIVILEGES;
