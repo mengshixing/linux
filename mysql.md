@@ -109,10 +109,10 @@
          末尾添加以下代码,重启mysql即可
          [mysqld]          sql_mode=STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION
 	 
-12 windows端mysql报错(Fatal error: Can't open and lock privilege tables: Table 'mysql.user' doesn't exist)
-    切换到mysql/bin目录下面 mysql_install_db --datadir ../data 重新初始化一下即可.
-	  另外添加一下root密码
-	  update mysql.user set authentication_string=password('Woniu123@') where user='root' and Host ='localhost';
+12 windows端mysql报错(Fatal error: Can't open and lock privilege tables: Table 'mysql.user' doesn't exist)			
+    切换到mysql/bin目录下面 mysql_install_db --datadir ../data 重新初始化一下即可.			
+	  另外添加一下root密码				
+	  update mysql.user set authentication_string=password('Woniu123@') where user='root' and Host ='localhost';			
     然后flush privileges;
    
     
