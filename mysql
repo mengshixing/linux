@@ -114,18 +114,3 @@
 	  另外添加一下root密码				
 	  update mysql.user set authentication_string=password('Woniu123@') where user='root' and Host ='localhost';			
     然后flush privileges;
-   
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
