@@ -106,5 +106,7 @@
       version:  2
   刷新服务：sudo netplan apply 即可
  24 lspci |grep Ethernet 查看网卡类型。
- 25 fdisk -l 查看磁盘分区 
+ 25 安装.deb扩展, 
+    dpkg -c 查看内容
+    dpkg -i 提取内容
  26 mount /dev/sda /mut/usb 挂载U盘 后着为挂载位置
