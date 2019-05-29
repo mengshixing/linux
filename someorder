@@ -105,4 +105,4 @@
           optional: no 
       version:  2
   刷新服务：sudo netplan apply 即可
-
+ 24 lspci |grep Ethernet 查看网卡类型。 
