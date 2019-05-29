@@ -105,4 +105,6 @@
           optional: no 
       version:  2
   刷新服务：sudo netplan apply 即可
- 24 lspci |grep Ethernet 查看网卡类型。 
+ 24 lspci |grep Ethernet 查看网卡类型。
+ 25 fdisk -l 查看磁盘分区 
+ 26 mount /dev/sda /mut/usb 挂载U盘 后着为挂载位置
