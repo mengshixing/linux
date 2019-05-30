@@ -63,7 +63,7 @@
 
 15  file+文件名查看文件属性
    
-16  改变文件权限 chmod 777 文件名  可以快速赋文件所以权限
+16  改变文件权限 chmod 777 文件名  可以快速赋文件所有权限
 
 17  update-alternatives --config java可以选择当前使用的版本软连接,带*号为当前使用       
     
@@ -101,10 +101,12 @@
           gateway4:  192.168.0.1  
           nameservers:  
              addresses: [114.114.114.114, 8.8.8.8]
-          dhcp4: no 
-          optional: no 
+          dhcp4: false
+          optional: true
       version:  2
   刷新服务：sudo netplan apply 即可
+  调试可以 netplan --debug apply  调试生成 netplan --debug generate 等
+  一般默认 netplan 会调用 systemd-networkd 服务,也可以支持 NetworkManager 
  24 lspci |grep Ethernet 查看网卡类型。
  25 安装.deb扩展, 
     dpkg -c 查看内容
