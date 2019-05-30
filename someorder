@@ -112,3 +112,8 @@
     dpkg -c 查看内容
     dpkg -i 提取内容
  26 mount /dev/sda /mut/usb 挂载U盘 后着为挂载位置
+ 27 systemctl 查看当前启动的服务列表
+    systemctl enable systemd-networkd 启用服务开机自启 
+    systemctl disable systemd-networkd 关掉
+    systemctl status systemd-networkd 查看状态
+    systemctl list-unit-files 列出所有服务和状态
