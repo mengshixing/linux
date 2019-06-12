@@ -1,0 +1,5 @@
+如何处理一些不想关联的文件文件夹
+1  删除文件的追踪状态 
+ git rm --cached -r test/flower/ 
+ 
+ 然后在.gitignore文件添加目录commit即可
