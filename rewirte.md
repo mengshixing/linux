@@ -28,3 +28,14 @@
 + RewriteCond 匹配,-f文件-d目录,!表示这个文件/目录不存在,就会执行下面的RewriteRule
 + 参考http://www.cnphp.info/htaccess-rewrite.html
 + https://blog.csdn.net/cmzhuang/article/details/53537591
+
+# nginx
+## location
+	location /admin {	  
+		index  index.html index.htm;
+		#error_page 404 /admin/index.html;
+		if (!-e $request_filename) {
+			rewrite ^/(.*) /admin/index.html last;
+			break;
+		}
+	}
