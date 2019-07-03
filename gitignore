@@ -3,3 +3,7 @@
  git rm --cached -r test/flower/ 
  
  然后在.gitignore文件添加目录commit即可
+
+2 The following untracked working tree files would be removed by merge 的问题 
+  stash pop之后 deleted in Updated upstream and modified in Stashed changes 
+  git stash branch origin/master
