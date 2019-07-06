@@ -7,3 +7,8 @@
 2 The following untracked working tree files would be removed by merge 的问题 
   stash pop之后 deleted in Updated upstream and modified in Stashed changes 
   git stash branch origin/master
+
+3 fatal: Path 'XXX' is in submodule 'XXX'  一般是因为项目内部子模块有自己的git仓库
+  git rm -rf --cached xx/xx/
+  git add xx/xx/*
+  git status
