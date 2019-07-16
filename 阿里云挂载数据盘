@@ -1,0 +1,11 @@
+fdisk -l  
+
+mkfs.ext4 /dev/vdb   
+
+makdir data
+
+mount /dev/vdb  /data
+
+vi  /etc/fstab 最后添加 /dev/vdb   /data ext4    defaults    0  0  
+
+init 6重启 df -h  
