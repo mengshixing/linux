@@ -117,3 +117,4 @@
     systemctl disable systemd-networkd 关掉
     systemctl status systemd-networkd 查看状态
     systemctl list-unit-files 列出所有服务和状态
+ 28 service mongod restart 重启mongo服务
