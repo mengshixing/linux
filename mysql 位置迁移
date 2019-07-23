@@ -1,0 +1,14 @@
+ubuntu 18环境
+
+1  停止服务 systemctl stop mysql.service 
+2  cp  -a  /var/lib/mysql  /data/mysql
+3  vi  /etc/mysql/mysql.conf.d/mysqld.cnf   # mysql配置文件
+   修改  datadir=/data/mysql   
+4  vi  /etc/apparmor.d/usr.sbin.mysqld  修改
+    # Allow data dir access
+      /data/mysql/ r,
+      /data/mysql/** rwk,
+      
+5  systemctl restart apparmor.service
+6  chown -R mysql:mysql  /data/mysql
+7   systemctl start mysql.service 
