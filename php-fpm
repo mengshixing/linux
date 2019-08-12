@@ -1,0 +1,9 @@
+如果nginx配置了太多域名,403forbidden可能需要修改参数
+修改php-fpm 配置文件参数
+	vi /etc/php/7.2/fpm/pool.d/www.conf
+	修改以下几项
+	pm.max_children = 50  初始是5
+	pm.start_servers = 20  初始是2
+	pm.max_spare_servers = 30  初始是3
+
+http://blog.itpub.net/14184018/viewspace-1797411/
