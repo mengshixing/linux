@@ -25,3 +25,15 @@ vi /etc/mysql/mysql.conf.d/mysqld.cnf  去掉注释
 bind-address          = 192.168.0.2
 server-id              = 2
 log_bin                = /var/log/mysql/mysql-bin.log
+
+4 从库登录进去  mysql -u root -p 登进去 use mysql;
+先停用  stop slave;
+
+CHANGE MASTER TO
+MASTER_HOST='192.168.0.1',
+MASTER_USER='repl',
+MASTER_PASSWORD='replica_password',
+MASTER_LOG_FILE='mysql-bin.000003',
+MASTER_LOG_POS=880;
+
+再启用 start slave;
