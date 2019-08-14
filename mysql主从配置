@@ -13,6 +13,8 @@ log_bin                = /var/log/mysql/mysql-bin.log
  flush privileges; 刷下权限
  
  查看主库状态 SHOW MASTER STATUS;
+ 查看权限状态 show grants;
+ 查看权限状态 show grants for repl@'192.168.0.2';
  
   File             | Position | Binlog_Do_DB | Binlog_Ignore_DB | Executed_Gtid_Set |
 +------------------+----------+--------------+------------------+-------------------+
@@ -37,3 +39,8 @@ MASTER_LOG_FILE='mysql-bin.000003',
 MASTER_LOG_POS=880;
 
 再启用 start slave;
+查看从库状态 show slave status\G
+
+PS:select user,host,plugin,authentication_string from user;
+PS: 在配置从库以后，出现Slave_IO_RunningConnecting和Slave_SQL_Running: Yes状态，查看下面错误信息，发现报错无法连接到主库ip，
+一般都是权限的问题，去主库刷一下权限即可
