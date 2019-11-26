@@ -114,3 +114,11 @@
 	  另外添加一下root密码				
 	  update mysql.user set Password=password('123456') where user='root' and Host ='localhost';			
     然后flush privileges;
+13  10.1.39-MariaDB唯一索引超过767处理,原因是utf8mb4占用4个字节,varchar(200)的话就会大于767;
+    一般来说可以通过修改配置文件来解决：在my.ini的[mysqld]里面添加下面五行，旧版本的mysql写ON无效,需要写1
+    	innodb_file_format = BARRACUDA
+	innodb_file_format_max = BARRACUDA
+	innodb_default_row_format = dynamic
+	innodb_large_prefix = 1
+	innodb_file_per_table=1
+    
