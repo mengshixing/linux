@@ -7,3 +7,9 @@
 	pm.max_spare_servers = 30  初始是3
 
 http://blog.itpub.net/14184018/viewspace-1797411/
+
+  dpkg -l | grep php 查看相关的php包
+  sudo apt-get autoremove php*   删除php相关的配置
+  dpkg -l | grep ^rc | cut -d' ' -f3 | sudo xargs dpkg --purge  删除rc状态冗余包
+ 
+
