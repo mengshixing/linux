@@ -31,9 +31,9 @@
 
 ## 5 
 + rewrite 代理网址移动端转发
-  RewriteCond %{HTTP_HOST} ^(www\.)?domian\.cn$ [NC]
-  RewriteCond %{HTTP_USER_AGENT} "(Android|blackberry|googlebot-mobile|iemobile|Mobile|ipad|iphone|ipod|opera mobile|palmos|webos|ucweb|Windows Phone|Symbian|hpwOS|MQQBrowser)" [NC]
-  RewriteRule ^(.*)$ http://h5.domian.cn/$1 [P]
++ RewriteCond %{HTTP_HOST} ^(www\.)?domian\.cn$ [NC]
++ RewriteCond %{HTTP_USER_AGENT} "(Android|blackberry|googlebot-mobile|iemobile|Mobile|ipad|iphone|ipod|opera mobile|palmos|webos|ucweb|Windows Phone|Symbian|hpwOS|MQQBrowser)" [NC]
++ RewriteRule ^(.*)$ http://h5.domian.cn/$1 [P]
 
 # nginx
 ## location
