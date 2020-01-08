@@ -29,6 +29,12 @@
 + 参考http://www.cnphp.info/htaccess-rewrite.html
 + https://blog.csdn.net/cmzhuang/article/details/53537591
 
+## 5 
++ rewrite 代理网址移动端转发
+  RewriteCond %{HTTP_HOST} ^(www\.)?domian\.cn$ [NC]
+  RewriteCond %{HTTP_USER_AGENT} "(Android|blackberry|googlebot-mobile|iemobile|Mobile|ipad|iphone|ipod|opera mobile|palmos|webos|ucweb|Windows Phone|Symbian|hpwOS|MQQBrowser)" [NC]
+  RewriteRule ^(.*)$ http://h5.domian.cn/$1 [P]
+
 # nginx
 ## location
 	location /admin {	  
@@ -39,5 +45,10 @@
 			break;
 		}
 	}
+	
+ ## 代理网址移动端转发
+    if ($http_user_agent ~* "(Android|iPhone|Windows Phone|UC|Kindle)"){
+        rewrite ^/(.*)$ http://rsh.chinawnw.cn/wap redirect;
+    }
 + 参考https://www.cnblogs.com/brianzhu/p/8624703.html
 + https://www.cnblogs.com/czlun/articles/7010604.html
