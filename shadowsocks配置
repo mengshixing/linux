@@ -28,4 +28,4 @@ vi /usr/local/lib/python2.7/dist-packages/shadowsocks/crypto/openssl.py
 把 ：libcrypto.EVP_CIPHER_CTX_cleanup(self._ctx)
 改： libcrypto.EVP_CIPHER_CTX_reset(self._ctx)
 
-错误2 启动失败Cannot assign requested address: bind 本地server设置成0.0.0.
+错误2 启动失败Cannot assign requested address: bind 本地server设置成0.0.0.0
