@@ -18,7 +18,8 @@ pip install shadowsocks
 后台启动/停止
 ssserver -c /etc/shadowsocks.json -d start # 启动
 ssserver -c /etc/shadowsocks.json -d stop # 停止
-4 错误1 load undefined symbol: EVP_CIPHER_CTX_cleanup
+4 关闭防火墙systemctl stop firewalld.service
+5 错误1 load undefined symbol: EVP_CIPHER_CTX_cleanup
 编辑openssl.py文件
 vi /usr/local/lib/python2.7/dist-packages/shadowsocks/crypto/openssl.py
 第一处：
