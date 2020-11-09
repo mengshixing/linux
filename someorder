@@ -118,3 +118,4 @@
     systemctl status systemd-networkd 查看状态
     systemctl list-unit-files 列出所有服务和状态
  28 service mongod restart 重启mongo服务
+ 29 php smtp mail报错535 进邮箱把密码配置为授权码即可
